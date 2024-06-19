@@ -10,6 +10,23 @@
   src: url(font/summernote.eot);
   src: url(font/summernote.eot?#iefix) format("embedded-opentype"),url(font/summernote.ttf) format("truetype");
 }
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('font/Lato-Regular.ttf') format('truetype'),
+       url('font/Lato-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('font/Roboto-Regular.ttf') format('truetype'),
+       url('font/Roboto-Regular.ttf') format('truetype');
+  font-display: swap;
+},
 
 [class*=" note-icon"]:before,[class^=note-icon]:before {
   display: inline-block;

@@ -165,7 +165,8 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
       });
     }
     //check the font name if it matches one of the predetermined fonts and update the toolbar
-    if (['Courier New', 'sans-serif', 'Times New Roman'].contains(fontName)) {
+    if (['Courier New', 'sans-serif', 'Times New Roman', 'Lato', 'Roboto']
+        .contains(fontName)) {
       setState(mounted, this.setState, () {
         _fontNameSelectedItem = fontName;
       });
@@ -657,6 +658,22 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                     child: PointerInterceptor(
                         child: Text('Times New Roman',
                             style: TextStyle(fontFamily: 'Times'))),
+                  ),
+                  CustomDropdownMenuItem(
+                    value: 'Lato',
+                    child: PointerInterceptor(
+                        child: Text('Lato',
+                            style: TextStyle(
+                              fontFamily: 'Lato',
+                            ))),
+                  ),
+                  CustomDropdownMenuItem(
+                    value: 'Roboto',
+                    child: PointerInterceptor(
+                        child: Text('Roboto',
+                            style: TextStyle(
+                              fontFamily: 'Roboto',
+                            ))),
                   ),
                 ],
                 value: _fontNameSelectedItem,
