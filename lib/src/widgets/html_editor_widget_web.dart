@@ -229,6 +229,7 @@ class _HtmlEditorWidgetWebState extends State<HtmlEditorWidget> {
         console.log('done');
       
         function handleMessage(e) {
+        console.log("handle message called")
           if (e && e.data && e.data.includes("toIframe:")) {
             var data = JSON.parse(e.data);
             if (data["view"].includes("$createdViewId")) {
@@ -696,6 +697,7 @@ class _HtmlEditorWidgetWebState extends State<HtmlEditorWidget> {
 
   /// Adds an event listener to check when a callback is fired
   void addJSListener(Callbacks c) {
+    print("JS listener called");
     html.window.onMessage.listen((event) {
       var data = json.decode(event.data);
       if (data['type'] != null &&
